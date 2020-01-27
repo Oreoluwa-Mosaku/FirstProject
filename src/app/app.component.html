@@ -1,0 +1,39 @@
+<div class="wrapper">
+<div class="container">
+<h1 class= "center" >Fintrak Academy Album</h1>
+  <!-- <h1 class ="yellow"> Class Album</h1>
+
+
+<ul class="list-group small-width">
+  <li class="list-group-item">Tosin</li>
+  <li class="list-group-item">Oreoluwa</li>
+  <li class="list-group-item">Ifemi</li>
+  <li class="list-group-item">Mimisola</li>
+
+</ul> 
+<hr> -->
+
+  <!-- <div class="row">
+  <div class ="col-md-4">1</div>
+  <div class ="col-md-4">2</div>
+  <div class ="col-md-4">3</div>
+</div> -->
+
+  <!-- <div class="row">
+  <div class ="col-md-4" *ngFor="let trainees of academy; let i = index">{{i}}</div>
+
+</div> -->
+
+  <div class="row">
+    <div class="col-md-4" *ngFor="let trainees of academy; let i = index">
+      <app-trainee [trainees]="trainees"></app-trainee>
+      <!-- <ul class = "list-group small-width li-no-bullet">
+  <li *ngFor="let trainees of academy"> -->
+
+      
+    </div>
+    <hr>
+    <!-- <hr>
+<app-counter-app></app-counter-app>
+<app-ore></app-ore> -->
+  </div>
