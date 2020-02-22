@@ -1,0 +1,53 @@
+<h3>Angular form that works</h3>
+<p>email: {{email}}</p>
+<p>name: {{name}}</p>
+
+<div>
+    <input type="button" (click)="formValue=null" value="Reset Form">
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        <div *ngIf =!formValue>
+            <form #f ="ngForm" (ngSubmit)="OnSubmit(f)">
+                <div>
+                    <label>Name:</label><br>
+                    <input type="text" name="name" placeholder="Enter Your name" [ngModel] ="name"/>
+                </div>
+                <br />
+                <div>
+                    <label>Email:</label><br>
+                    <input type="email" name="email" [(ngModel)] = "email" />
+                </div>
+                <br />
+                <div>
+                    <label>Bio:</label><br>
+                    <textarea name="Bio" ngModel></textarea>
+                </div>
+                <br />
+                <div>
+                    <label for="gender">Gender:</label><br>
+                    <input type="radio" id="male" name="gender" value="male" ngModel>
+                    <label for="male">Male</label><br>
+                    <input type="radio" id="female" name="gender" value="female" ngModel>
+                    <label for="female">Female</label><br>
+                    <input type="radio" id="other" name="gender" value="other"ngModel>
+                    <label for="other">Other</label>
+                </div>
+                <br />
+                <input type="submit" name="submit" value="Submit" />
+            </form>
+        </div>
+        
+
+    </div>
+    <div class="col-md-4">
+        <div *ngIf="formValue">
+            <p>Name: {{formValue.name}}</p>
+            <p>Email: {{formValue.email}}</p>
+            <p>Bio: {{formValue.Bio}}</p>
+            <p>Gender: {{formValue.gender}}</p>
+        </div>
+    </div>
+</div>
+

@@ -7,17 +7,21 @@ import { OreComponent } from './ore/ore.component';
 import { CommonModule } from '@angular/common';
 import { CounterAppComponent } from './counter-app/counter-app.component';
 import { TraineeComponent } from './trainee/trainee.component';
+import { FormComponent } from './form/form.component';
+import {FormsModule} from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
     OreComponent,
     CounterAppComponent,
-    TraineeComponent
+    TraineeComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -11,10 +11,15 @@ export class AppComponent {
 
   title = 'First Project';
   tvshow = 'suits';
+  activeTrainee;
   academy = [
     {name: 'Tosin', image: './assets/img/or.jpg', complexion:'black', hobbies: ['playing']},
     {name: 'Oreoluwa', image: './assets/img/or.jpg', complexion: 'yellow', hobbies:['playing']},
     {name: 'Ifemi', image: './assets/img/or.jpg', complexion: 'yellow', hobbies:['playing']},
     {name: 'Mimisola', image: './assets/img/or.jpg', complexion: 'yellow', hobbies:['playing']}
   ];
+  traineelistener(trainees) {
+  console.log(trainees);
+  this.activeTrainee = trainees;
+  }
 }
