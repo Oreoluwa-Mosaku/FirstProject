@@ -9,6 +9,7 @@ export class FormComponent implements OnInit {
   name = "oreoluwa";
   email = "oremosaku@gmail.com"
   formValue;
+  register =[];
   constructor() { }
 
   ngOnInit() {
@@ -22,6 +23,7 @@ export class FormComponent implements OnInit {
       console.log(form.value);
       console.log(this.email)
       this.formValue=form.value;
+      this.register.push(this.formValue);
       form.reset();
   }
 
